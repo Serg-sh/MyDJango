@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 #     My Web Page
     'webPage1',
     'mainApp',
+    'news',
 ]
 
 MIDDLEWARE = [
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'firstSite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'mainApp/templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
