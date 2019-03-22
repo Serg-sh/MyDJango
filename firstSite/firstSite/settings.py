@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
 #     My Web Page
     'webPage1',
+    'mainApp',
 ]
 
 MIDDLEWARE = [
