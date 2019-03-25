@@ -1,10 +1,14 @@
+from django.conf.urls import url
 from django.urls import path
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 from news.models import Articles
 
-queryset = Articles.objects.all().order_by('-date')[20]
+queryset = Articles.objects.all().order_by('-date')[:20]
 template_name = 'news/posts.html'
 urlpatterns = [
     path('', ListView.as_view(queryset=queryset, template_name=template_name)),
+    url(r'^/(?P<pk>\d+)$', DetailView.as_view(model=Articles, template_name='news/post.html'))
+
+
 ]
