@@ -19,7 +19,7 @@ from blog.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('posts/', include('blog.urls')),
+    path('blog/', include('blog.urls')),
     path('', post_list, name='home_url'),
 
 ]
